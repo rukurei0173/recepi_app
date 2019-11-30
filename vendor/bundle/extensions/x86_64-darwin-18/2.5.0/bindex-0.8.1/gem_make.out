@@ -1,0 +1,15 @@
+current directory: /Users/reina/rails/recipe_log/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+/Users/reina/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20191120-57109-1q7rzp5.rb extconf.rb
+creating Makefile
+
+current directory: /Users/reina/rails/recipe_log/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/reina/rails/recipe_log/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/reina/rails/recipe_log/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20191120-57109-l3bksr/skiptrace/internal

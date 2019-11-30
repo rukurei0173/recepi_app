@@ -1,0 +1,45 @@
+<!-- どのページでも表示したいHTMLはapplication.html.erbに書いておく -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TweetApp</title>
+    <%= csrf_meta_tags %>
+
+　  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- ここにヘッダーを書いてください -->
+    <header>
+  <div class="header-logo">
+    <%= link_to("HOME", "/")%>
+  </div>
+  <ul class="header-menus">
+    <li>
+      <%= link_to("ABOUT", "/about")%>
+    </li>
+    <li>
+      <%= link_to("INDEX", "/posts/index")%>
+    </li>
+    <li>
+      <%= link_to("❤︎", "/folders/index")%>
+    </li>
+
+    <li>
+      <%= link_to("NEW", "/posts/new")%>
+    </li>
+
+  </ul>
+</header>
+<% if flash[:notice]%>
+  <div class="flash">
+    <%= flash[:notice]%>
+  </div>
+<% end %>
+
+    <!-- 各ビューファイルは以下のyieldに代入され、application.html.erbの一部となる -->
+    <%= yield %>
+  </body>
+</html>

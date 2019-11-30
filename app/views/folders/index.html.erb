@@ -1,0 +1,12 @@
+<div class="main posts-index">
+  <div class="container">
+
+    <% @folder_names.each do |folder_name| %>
+      <div class="posts-index-item">
+        <%= link_to(folder_name.folder_name,  "/folders/#{folder_name.id}") %>
+        <br> <%= Folder.where(foldername_id: folder_name.id).count %> </br>
+       </div>
+    <% end %>
+
+  </div>
+</div>

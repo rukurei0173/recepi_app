@@ -1,0 +1,29 @@
+<div class="main posts-show">
+  <div class="container">
+    <div class="posts-show-item">
+      <p>
+        <%= @post.content %>
+        <%= image_tag @post.image_name.to_s if @post.image_name.present? %>
+
+      </p>
+      <div class="post-time">
+        <%= @post.created_at %>
+
+
+<%if false%>
+      <%= form_for @folder_name do |n| %>
+        <%= n.label :id %>
+        <%= n.collection_select :id, FolderName.all, :id, :name %>
+      <% end %>
+
+<%end %>
+
+      </div>
+       <%= link_to("❤︎", "/folders/#{@post.id}/create", {method: "post"}) %>
+      <div class="post-menus">
+        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+        <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+      </div>
+    </div>
+  </div>
+</div>

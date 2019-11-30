@@ -1,0 +1,11 @@
+<div class="main posts-index">
+  <div class="container">
+    <% @folders.each do |folder| %>
+      <div class="posts-index-item">
+        <% @post = Post.find_by(id: folder.post_id) %>
+         <%= link_to(@post.content,  "folders/posts/#{@post.id}") %>
+         <%= image_tag @post.image_name.to_s if @post.image_name.present? %>
+       </div>
+    <% end %>
+  </div>
+</div>
