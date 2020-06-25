@@ -1,1 +1,1 @@
-勉強中..
+Ruby on Rails勉強中
